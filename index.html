@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>C-Square Computers – Laptops, Desktops, CCTV &amp; Networking in Hyderabad</title>
+<meta name="description" content="C-Square Computers: laptops, desktops, repairs, CCTV, biometric access and Wi-Fi networking for homes, shops and offices in Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f2f4f8; --surface:#ffffff; --ink:#101828; --muted:#5a6578; --line:#d9deea;
+  --cobalt:#2742f5; --cobalt-ink:#ffffff; --mint:#12a37a; --amber:#ffb020; --tint:#e6ebff;
+  --grid:rgba(39,66,245,.07);
+  --display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1220; --surface:#171d33; --ink:#eef1fb; --muted:#9aa5c0; --line:#2a3250;
+    --cobalt:#6f86ff; --cobalt-ink:#0e1220; --mint:#3ddba8; --tint:#222c55; --grid:rgba(111,134,255,.09);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1220; --surface:#171d33; --ink:#eef1fb; --muted:#9aa5c0; --line:#2a3250;
+  --cobalt:#6f86ff; --cobalt-ink:#0e1220; --mint:#3ddba8; --tint:#222c55; --grid:rgba(111,134,255,.09);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.5rem,7vw,5.2rem);font-weight:800}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.25rem var(--display);text-decoration:none;letter-spacing:-.02em}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--cobalt);color:var(--cobalt-ink);display:grid;place-items:center;font:800 .95rem var(--display);font-style:normal;transform:rotate(-6deg)}
+nav{display:flex;gap:4px}
+nav a{padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.tools{display:flex;gap:8px;align-items:center}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font-size:1rem}
+.menu-btn{display:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;border:2px solid var(--ink);background:var(--cobalt);color:var(--cobalt-ink);font:600 1rem var(--body);text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.ghost{background:var(--surface);color:var(--ink)}
+.btn.sm{padding:9px 16px;font-size:.9rem;box-shadow:3px 3px 0 var(--ink)}
+
+/* hero */
+.hero{padding:56px 0 40px;position:relative}
+.trace{position:absolute;left:0;top:18px;width:100%;height:30px;pointer-events:none}
+.trace path{stroke:var(--cobalt);stroke-width:2;fill:none;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.2s ease-out .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:22px 0 28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;background:var(--surface);border:1px solid var(--line);padding:6px 14px 6px 10px;border-radius:999px;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 25%,transparent)}
+
+/* console */
+.console{background:var(--surface);border:2px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--ink);overflow:hidden}
+.console-top{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:2px solid var(--ink);background:var(--tint);font-weight:600;font-size:.9rem}
+.console-top b{width:11px;height:11px;border-radius:50%;background:var(--ink);opacity:.25}
+.console-top span{margin-left:8px}
+.console-body{padding:20px}
+.console-body>p{font-weight:600;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:500 .92rem var(--body);cursor:pointer;transition:background .15s,border-color .15s}
+.chip:hover{border-color:var(--cobalt)}
+.chip[aria-pressed="true"]{background:var(--cobalt);border-color:var(--cobalt);color:var(--cobalt-ink)}
+.result{margin-top:18px;padding:16px;border-radius:14px;background:var(--paper);border:1px dashed var(--line);min-height:150px}
+.result h3{margin-bottom:6px}
+.result ol{margin:10px 0 14px;padding-left:20px;color:var(--muted);font-size:.95rem}
+.result.pop{animation:pop .35s ease-out}
+@keyframes pop{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* marquee */
+.brands{border-block:2px solid var(--ink);background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;margin:36px 0}
+.brands div{display:inline-flex;gap:44px;padding:14px 0;animation:slide 32s linear infinite;font:700 1.1rem var(--display)}
+.brands:hover div{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section.blk{padding:56px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.head p{color:var(--muted);max-width:32em}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.cell{background:var(--surface);border:1.5px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.cell p{color:var(--muted);font-size:.98rem}
+.cell .ic{font-size:2rem;line-height:1}
+.c-a{grid-column:span 3;border-radius:28px 28px 8px 28px;background:var(--cobalt);color:var(--cobalt-ink);border-color:var(--ink)}
+.c-a p{color:inherit;opacity:.85}
+.c-b{grid-column:span 3;border-radius:28px 8px 28px 28px}
+.c-c{grid-column:span 2;border-radius:8px 28px 8px 28px}
+.c-d{grid-column:span 2;border-radius:28px}
+.c-e{grid-column:span 2;border-radius:28px 8px 28px 8px;background:var(--amber);color:#101828;border-color:var(--ink)}
+.c-e p{color:#101828;opacity:.8}
+.cell ul{margin:4px 0 0;padding-left:18px;font-size:.95rem}
+.cell .more{margin-top:auto;font-weight:600;text-decoration:none}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);border-radius:22px;background:var(--surface);overflow:hidden}
+.step{padding:24px;border-right:2px solid var(--ink)}
+.step:last-child{border-right:0}
+.step b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);font:700 .95rem var(--display);margin-bottom:12px}
+.step p{color:var(--muted);font-size:.95rem;margin-top:6px}
+
+/* products */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card .ic{width:54px;height:54px;border-radius:16px;background:var(--tint);display:grid;place-items:center;font-size:1.6rem}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.tag{font-size:.8rem;font-weight:600;color:var(--cobalt)}
+
+/* about / contact / blog */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:20px}
+.fact h3{font-size:1.1rem;margin-bottom:4px}
+.fact p{color:var(--muted);font-size:.93rem}
+.page-title{padding:52px 0 8px}
+.page-title p{color:var(--muted);margin-top:14px;max-width:36em;font-size:1.1rem}
+form{display:grid;gap:14px;background:var(--surface);border:2px solid var(--ink);border-radius:22px;padding:24px;box-shadow:6px 6px 0 var(--ink)}
+label{font-weight:600;font-size:.93rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);width:100%}
+textarea{min-height:110px;resize:vertical}
+.info{display:grid;gap:14px}
+.info a.row,.info .row{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:18px;text-decoration:none}
+.info .row .ic{font-size:1.4rem}
+.info .row small{color:var(--muted);display:block}
+.post{background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:0;margin-bottom:14px;overflow:hidden}
+.post button{all:unset;box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:center;gap:16px;padding:22px;cursor:pointer}
+.post button:focus-visible{outline:3px solid var(--cobalt);outline-offset:-3px}
+.post h3{font-size:1.2rem}
+.post small{color:var(--muted)}
+.post .body{display:none;padding:0 22px 22px;color:var(--muted)}
+.post.open .body{display:block}
+.post.open .plus{transform:rotate(45deg)}
+.plus{font:700 1.6rem var(--display);transition:transform .2s}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--paper);padding:12px 20px;border-radius:14px;opacity:0;pointer-events:none;transition:.25s;z-index:80;font-weight:500}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+footer{border-top:2px solid var(--ink);margin-top:50px;background:var(--surface)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding:40px 20px}
+.foot h3{font-size:1rem;margin-bottom:10px}
+.foot a,.foot p{display:block;color:var(--muted);font-size:.95rem;margin-bottom:6px;text-decoration:none}
+.foot a:hover{color:var(--ink)}
+.copy{border-top:1px solid var(--line);padding:16px 20px;color:var(--muted);font-size:.88rem}
+
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);text-decoration:none;font-size:1.6rem}
+
+@media (max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr}
+  .bento>*{grid-column:span 6!important}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:0}
+  .step:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .foot{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 20px;flex-direction:column}
+  nav.open{display:flex}
+  nav a{padding:12px 14px}
+  .tools .btn{display:none}
+}
+@media (max-width:520px){.facts{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:2px solid var(--ink)}.step:last-child{border-bottom:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.trace path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="C-Square Computers home"><i>C²</i>C-Square Computers</a>
+    <nav id="nav" aria-label="Main">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#blog">Blog</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button>
+      <a class="btn sm" data-wa="Hi C-Square Computers, I need some help." href="#">Chat on WhatsApp</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="logo" href="#home"><i>C²</i>C-Square Computers</a>
+      <p style="margin-top:12px;max-width:26em">Laptops, desktops, repairs, CCTV and networking for homes, shops and offices in Hyderabad.</p>
+    </div>
+    <div><h3>Explore</h3><a href="#services">Services</a><a href="#products">Products</a><a href="#about">About</a><a href="#blog">Blog</a></div>
+    <div><h3>Visit us</h3><p data-addr></p><a data-map target="_blank" rel="noopener" href="#">Open in Google Maps</a><a data-wa="Hi C-Square Computers, I have a question." href="#">WhatsApp us</a></div>
+  </div>
+  <div class="wrap copy">© 2026 C-Square Computers. All rights reserved.</div>
+</footer>
+<a class="fab" data-wa="Hi C-Square Computers, I need some help." href="#" aria-label="Chat on WhatsApp">✆</a>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== Edit your business details here ===== */
+const BIZ = {
+  name: "C-Square Computers",
+  phone: "+91 91829 64348",
+  whatsapp: "919182964348",
+  email: "hello@example.com",        // TODO: replace
+  address: "Add your full shop address here, Hyderabad",   // TODO
+  hours: "Add your opening hours",   // TODO
+  lat: 17.4372903, lng: 78.4480624,
+  mapUrl: "https://www.google.com/maps/place/C-Square+Computers/@17.4372903,78.4480624,17z"
+};
+
+const SERVICES = [
+  {id:"repair", ic:"🛠️", t:"Laptop & desktop repair", d:"Slow, overheating, no display, dead battery or a broken hinge. We find the fault, tell you the cost, then fix it.", list:["Chip-level and screen repair","SSD and RAM upgrades","Virus removal and fresh Windows install"]},
+  {id:"cctv", ic:"📹", t:"CCTV surveillance", d:"Camera layout, cabling, DVR/NVR setup and remote viewing on your phone for homes, shops and factories."},
+  {id:"network", ic:"📶", t:"Wi-Fi & networking", d:"Access points, routers, structured cabling and dead-zone fixes for offices and apartments."},
+  {id:"biometric", ic:"🔐", t:"Biometric & access control", d:"Fingerprint and face attendance, door locks and entry logs that stay in your control."},
+  {id:"buy", ic:"💻", t:"New laptops & desktops", d:"Honest advice on what to buy for work, study, design or gaming, plus custom-built desktops."}
+];
+
+const PRODUCTS = [
+  {c:"Laptops", ic:"💻", t:"Business laptops", d:"Reliable machines for office work, accounts and remote teams."},
+  {c:"Laptops", ic:"🎓", t:"Student laptops", d:"Light, long-battery models that stay within a college budget."},
+  {c:"Desktops", ic:"🖥️", t:"Office desktops", d:"Branded and assembled PCs, set up and ready to plug in."},
+  {c:"Desktops", ic:"🎮", t:"Custom gaming & design PCs", d:"Pick the parts, we build, test and tune it."},
+  {c:"Security", ic:"📹", t:"CCTV cameras & recorders", d:"Dome, bullet and PTZ cameras with DVR or NVR kits."},
+  {c:"Security", ic:"👆", t:"Biometric devices", d:"Attendance terminals and access-control readers."},
+  {c:"Networking", ic:"📡", t:"Routers & access points", d:"Dual-band and mesh Wi-Fi for homes and offices."},
+  {c:"Networking", ic:"🔌", t:"Switches & cabling", d:"Network switches, patch panels and cable for clean installs."},
+  {c:"Accessories", ic:"⌨️", t:"Peripherals", d:"Keyboards, mice, monitors, webcams, UPS and storage."}
+];
+
+const DIAG = {
+  slow:{t:"Laptop or PC repair", steps:["Bring it in or book a pickup","We diagnose and share a clear quote","You approve, we repair and test"], wa:"My laptop/PC is slow or has a fault. Can you check it?"},
+  cctv:{t:"CCTV installation", steps:["Site visit and camera plan","Cabling and camera mounting","Phone viewing set up and explained"], wa:"I need CCTV cameras installed. Can you visit and quote?"},
+  wifi:{t:"Wi-Fi and networking", steps:["We map where the signal drops","Place access points and routers","Test coverage in every room"], wa:"I have Wi-Fi dead zones in my office/home. Can you help?"},
+  buy:{t:"Buying a new computer", steps:["Tell us your work and budget","We shortlist two or three options","Setup, data transfer and warranty help"], wa:"I want to buy a new laptop/desktop. Please suggest options."},
+  bio:{t:"Biometric attendance & access", steps:["Understand staff count and doors","Install devices and software","Train your team on reports"], wa:"I need a biometric attendance/access control system."}
+};
+
+const POSTS = [
+  {t:"Five signs your laptop needs service, not replacement", m:"4 min read", b:"Fans that roar at idle, battery that drops from 100 to 40 in minutes, random shutdowns, a slow boot, or a hot keyboard. Most of these come from dust, dried thermal paste, an ageing battery or a full old hard drive. A clean-up and an SSD upgrade often gives you years back for a fraction of a new laptop’s price."},
+  {t:"How many CCTV cameras does a small shop really need?", m:"3 min read", b:"Start with the entrance, the billing counter and the stock area. Add one outside camera covering the shutter. Plan for night vision and a recorder with enough storage for at least two weeks of footage. A site visit helps, because angles matter more than camera count."},
+  {t:"Why your Wi-Fi is slow in the back room", m:"3 min read", b:"One router at the front cannot push a strong signal through walls. Moving the router to a central spot, using wired access points, or adding a mesh system fixes most dead zones. Cables beat repeaters whenever you can run them."}
+];
+
+/* ===== helpers ===== */
+const $ = (s,r=document)=>r.querySelector(s);
+const wa = msg => `https://wa.me/${BIZ.whatsapp}?text=${encodeURIComponent(msg)}`;
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2600)}
+
+/* ===== views ===== */
+const V = {};
+V.home = () => `
+<section class="hero"><div class="wrap">
+  <svg class="trace" viewBox="0 0 1180 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 15 H260 L290 5 H520 L550 25 H800 L830 15 H1180"/></svg>
+  <div class="hero-grid">
+    <div>
+      <div class="status"><span class="dot"></span>Hyderabad walk-ins and site visits</div>
+      <h1>Your tech, fixed, secured and connected.</h1>
+      <p class="lead">C-Square Computers sells and services laptops and desktops, and installs CCTV, biometric access and Wi-Fi for homes, shops and offices.</p>
+      <div class="cta"><a class="btn" href="#services">See our services</a><a class="btn ghost" href="#contact">Find the shop</a></div>
+    </div>
+    <div class="console" aria-labelledby="ct">
+      <div class="console-top"><b></b><b></b><b></b><span id="ct">What do you need today?</span></div>
+      <div class="console-body">
+        <p>Pick the closest match</p>
+        <div class="chips" id="chips">
+          <button class="chip" data-k="slow" aria-pressed="false">My laptop is slow</button>
+          <button class="chip" data-k="cctv" aria-pressed="false">CCTV for my shop</button>
+          <button class="chip" data-k="wifi" aria-pressed="false">Wi-Fi dead zones</button>
+          <button class="chip" data-k="buy" aria-pressed="false">Buying a new PC</button>
+          <button class="chip" data-k="bio" aria-pressed="false">Staff attendance</button>
+        </div>
+        <div class="result" id="result" aria-live="polite"><p style="color:var(--muted)">Choose an option and we will show how it works and open a WhatsApp message with your request already written.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+<div class="brands" aria-label="Product ranges"><div>${[...Array(2)].map(()=>"<span>Laptops</span><span>Desktops</span><span>CCTV</span><span>Biometrics</span><span>Wi-Fi</span><span>Switches</span><span>UPS</span><span>Monitors</span><span>Storage</span>").join("")}</div></div>
+<section class="blk"><div class="wrap">
+  <div class="head"><h2>Everything with a plug</h2><p>One local team for the computer on your desk and the cameras on your wall.</p></div>
+  <div class="bento">
+    <div class="cell c-a"><span class="ic">🛠️</span><h3>Repair and upgrades</h3><p>${SERVICES[0].d}</p><a class="more" href="#services">All services</a></div>
+    <div class="cell c-b"><span class="ic">📹</span><h3>CCTV and biometrics</h3><p>Know who comes in and what happens when you are not there, with live view on your phone.</p><a class="more" href="#services">See security services</a></div>
+    <div class="cell c-c"><span class="ic">📶</span><h3>Wi-Fi that reaches</h3><p>Coverage planning, not guesswork.</p></div>
+    <div class="cell c-d"><span class="ic">💻</span><h3>Honest buying advice</h3><p>We recommend what fits your work and budget.</p><a class="more" href="#products">Browse products</a></div>
+    <div class="cell c-e"><span class="ic">💬</span><h3>Ask first, pay later</h3><p>Describe the problem on WhatsApp and get a clear answer before you visit.</p><a class="more" data-wa="Hi C-Square Computers, I have a question." href="#">Message us</a></div>
+  </div>
+</div></section>
+<section class="blk" style="padding-top:10px"><div class="wrap">
+  <div class="head"><h2>How a job runs</h2><p>The same four steps for every service, so you always know what happens next.</p></div>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Tell us</h3><p>Call, message or walk in with the problem.</p></div>
+    <div class="step"><b>2</b><h3>Plan</h3><p>We inspect or survey, then share a clear quote.</p></div>
+    <div class="step"><b>3</b><h3>Do</h3><p>Repair or install, with tidy work and testing.</p></div>
+    <div class="step"><b>4</b><h3>Support</h3><p>Handover, a quick demo and help afterwards.</p></div>
+  </div>
+</div></section>`;
+
+V.services = () => `
+<div class="wrap page-title"><h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Services</h1><p>From a single laptop to a whole office floor, planned, installed and supported by one team.</p></div>
+<section class="blk"><div class="wrap grid">
+${SERVICES.map(s=>`<article class="card"><div class="ic">${s.ic}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p>${s.list?`<ul style="margin:0;padding-left:18px;color:var(--muted);font-size:.93rem">${s.list.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`:""}<a class="btn sm ghost" data-wa="Hi, I am interested in: ${esc(s.t)}" href="#">Ask about this</a></article>`).join("")}
+</div></section>`;
+
+V.products = () => `
+<div class="wrap page-title"><h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Products</h1><p>Tell us the brand or budget you prefer and we will confirm what is in stock.</p></div>
+<section class="blk"><div class="wrap">
+  <div class="filters" id="filters">${["All","Laptops","Desktops","Security","Networking","Accessories"].map((c,i)=>`<button class="chip" data-c="${c}" aria-pressed="${i==0}">${c}</button>`).join("")}</div>
+  <div class="grid" id="pgrid"></div>
+</div></section>`;
+
+V.about = () => `
+<div class="wrap page-title"><h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">About C-Square</h1><p>A neighbourhood computer shop in Hyderabad that also does the serious work: security systems and networks that keep a business running.</p></div>
+<section class="blk"><div class="wrap split">
+  <div><h2 style="margin-bottom:16px">Plan well. Install cleanly. Stay reachable.</h2>
+  <p style="color:var(--muted);margin-bottom:14px">We handle the full job, from advice and design to configuration, installation and handover, for homes, shops, offices and industrial sites.</p>
+  <p style="color:var(--muted)">When something goes wrong later, you call the same people who set it up.</p></div>
+  <div class="facts">
+    <div class="fact"><h3>Residential</h3><p>Home Wi-Fi, CCTV and family PCs.</p></div>
+    <div class="fact"><h3>Commercial</h3><p>Shops, clinics and offices.</p></div>
+    <div class="fact"><h3>Industrial</h3><p>Large-site cabling and surveillance.</p></div>
+    <div class="fact"><h3>Support</h3><p>Repairs and help after the sale.</p></div>
+  </div>
+</div></section>`;
+
+V.contact = () => `
+<div class="wrap page-title"><h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Contact</h1><p>Send your request and it opens in WhatsApp, ready to send.</p></div>
+<section class="blk"><div class="wrap split">
+  <form id="cform">
+    <label>Your name<input name="n" required autocomplete="name"></label>
+    <label>Phone number<input name="p" type="tel" required autocomplete="tel"></label>
+    <label>What do you need?<select name="s">${SERVICES.map(s=>`<option>${esc(s.t)}</option>`).join("")}</select></label>
+    <label>Details<textarea name="m" placeholder="Model, problem, number of cameras, size of space…"></textarea></label>
+    <button class="btn" type="submit">Send on WhatsApp</button>
+  </form>
+  <div class="info">
+    <a class="row" target="_blank" rel="noopener" data-map href="#"><span class="ic">📍</span><div><b>Visit the shop</b><small data-addr></small></div></a>
+    <a class="row" href="tel:${BIZ.phone.replace(/\s/g,'')}"><span class="ic">📞</span><div><b>Call</b><small>${esc(BIZ.phone)}</small></div></a>
+    <a class="row" href="mailto:${BIZ.email}"><span class="ic">✉️</span><div><b>Email</b><small>${esc(BIZ.email)}</small></div></a>
+    <div class="row"><span class="ic">🕘</span><div><b>Hours</b><small>${esc(BIZ.hours)}</small></div></div>
+  </div>
+</div></section>`;
+
+V.blog = () => `
+<div class="wrap page-title"><h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Blog</h1><p>Short, practical guides on computers, security and networks.</p></div>
+<section class="blk"><div class="wrap" style="max-width:820px">
+${POSTS.map((p,i)=>`<article class="post"><button aria-expanded="false" aria-controls="b${i}"><span><h3>${esc(p.t)}</h3><small>${p.m}</small></span><span class="plus" aria-hidden="true">+</span></button><div class="body" id="b${i}">${esc(p.b)}</div></article>`).join("")}
+</div></section>`;
+
+/* ===== behaviours ===== */
+const AFTER = {
+  home(){
+    const res=$('#result');
+    $('#chips').addEventListener('click',e=>{
+      const b=e.target.closest('.chip'); if(!b) return;
+      document.querySelectorAll('#chips .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+      const d=DIAG[b.dataset.k];
+      res.classList.remove('pop'); void res.offsetWidth; res.classList.add('pop');
+      res.innerHTML=`<h3>${d.t}</h3><ol>${d.steps.map(s=>`<li>${s}</li>`).join("")}</ol><a class="btn sm" target="_blank" rel="noopener" href="${wa(d.wa)}">Send this on WhatsApp</a>`;
+    });
+  },
+  products(){
+    const g=$('#pgrid');
+    const draw=c=>{g.innerHTML=PRODUCTS.filter(p=>c==="All"||p.c===c).map(p=>`<article class="card"><div class="ic">${p.ic}</div><span class="tag">${p.c}</span><h3>${esc(p.t)}</h3><p>${esc(p.d)}</p><a class="btn sm ghost" data-wa="Hi, I am looking for: ${esc(p.t)}. Is it available?" href="#">Check availability</a></article>`).join("");wireLinks()};
+    draw("All");
+    $('#filters').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;document.querySelectorAll('#filters .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));draw(b.dataset.c)});
+  },
+  contact(){
+    $('#cform').addEventListener('submit',e=>{
+      e.preventDefault();const f=new FormData(e.target);
+      const msg=`Hi C-Square Computers,\nName: ${f.get('n')}\nPhone: ${f.get('p')}\nNeed: ${f.get('s')}\nDetails: ${f.get('m')||'-'}`;
+      window.open(wa(msg),'_blank','noopener');toast('Opening WhatsApp with your message');
+    });
+  },
+  blog(){
+    document.querySelectorAll('.post button').forEach(b=>b.addEventListener('click',()=>{
+      const p=b.closest('.post');const o=p.classList.toggle('open');b.setAttribute('aria-expanded',o);
+    }));
+  }
+};
+
+function wireLinks(){
+  document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+  document.querySelectorAll('[data-map]').forEach(a=>a.href=BIZ.mapUrl);
+  document.querySelectorAll('[data-addr]').forEach(a=>a.textContent=BIZ.address);
+}
+
+function route(){
+  const k=(location.hash||'#home').slice(1);
+  const name=V[k]?k:'home';
+  $('#app').innerHTML=V[name]();
+  document.querySelectorAll('#nav a').forEach(a=>a.getAttribute('href')==='#'+name?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  $('#nav').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');
+  if(AFTER[name]) AFTER[name]();
+  wireLinks();window.scrollTo(0,0);
+  document.title=(name==='home'?'':name[0].toUpperCase()+name.slice(1)+' – ')+'C-Square Computers';
+}
+addEventListener('hashchange',route);
+
+$('#menu').addEventListener('click',()=>{const o=$('#nav').classList.toggle('open');$('#menu').setAttribute('aria-expanded',o)});
+$('#theme').addEventListener('click',()=>{
+  const dark=getComputedStyle(document.documentElement).getPropertyValue('--paper').trim()==='#0e1220';
+  document.documentElement.setAttribute('data-theme',dark?'light':'dark');
+  try{localStorage.setItem('cs-theme',dark?'light':'dark')}catch(e){}
+});
+try{const t=localStorage.getItem('cs-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+route();
+</script>
+</body>
+</html>
